@@ -60,6 +60,9 @@ main {
     .testimonial {
         margin: 3rem auto; /* 16px is the default size of the browser */
         max-width: 1500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .testimonial__list {
@@ -70,13 +73,9 @@ main {
     .testimonial__image-container {
         width: 65%;
         max-width: 580px;
-        display: inline-block;
-        vertical-align: middle;
     }
 
     .testimonial__info {
-        display: inline-block;
-        vertical-align: middle;
         width: 30%;
     }
 }
