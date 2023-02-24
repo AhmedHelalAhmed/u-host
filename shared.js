@@ -8,7 +8,9 @@ const toggleButton = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
 const closeModel = () => {
     backdrop.classList.remove('open');
-    modal.classList.remove('open');
+    if (modal) {
+        modal.classList.remove('open');
+    }
 };
 
 for (const selectPlanButton of selectPlanButtons) {
@@ -17,8 +19,9 @@ for (const selectPlanButton of selectPlanButtons) {
         modal.classList.add('open');
     });
 }
-
-closeModelButton.addEventListener("click", closeModel);
+if (closeModelButton) {
+    closeModelButton.addEventListener("click", closeModel);
+}
 backdrop.addEventListener("click", () => {
     mobileNav.classList.remove('open');
     closeModel();
