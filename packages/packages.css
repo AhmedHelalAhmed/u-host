@@ -1,3 +1,16 @@
+/* note: WOFF compressed then faster than ttf */
+/* note: WOFF 2.0 has some issues with some browsers but faster */
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('../fonts/anonymousPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('../fonts/anonymousPro-Bold.ttf') format('truetype');
+    font-weight: 700;/* you must add to not override always withe the last imported file */
+}
+
 main {
     padding-top: 2rem;
 }
@@ -51,8 +64,14 @@ main {
     color: #0e4f1f;
     border: 1px solid #0e4f1f;
     padding: 1rem;
-    font-size: 1.2rem;
+    /*font-size: 1.2rem;*/
     background: white;
+    /*font-family: 'AnonymousPro', 'Roboto', sans-serif;*/
+    /*font-weight: 700;*/
+    /* font: font-style font-variant font-weight font-size/line-height font-family */
+    /* font: 700 1.2rem 'AnonymousPro', sans-serif;*/
+    /* text-shadow: 2px 2px 7px rgb(185, 180, 180); */
+    font-size: 1.2rem;
 }
 
 .clearfix {
