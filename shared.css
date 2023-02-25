@@ -127,6 +127,9 @@ main {
     border-bottom: 5px solid white;
 }
 
+.main-nav__item--call-to-action {
+    animation: wiggle 200ms 3s 8 alternate none;
+}
 /* pseudo element */
 /*p::first-letter {*/
 /*    color: red;*/
@@ -269,5 +272,14 @@ main {
     .main-footer__links {
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotateZ(-10deg);
+    }
+    to {
+        transform: rotateZ(10deg);
     }
 }
