@@ -7,15 +7,21 @@ const closeModelButton = document.querySelector('.modal__action--negative');
 const toggleButton = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
 const closeModel = () => {
-    backdrop.classList.remove('open');
     if (modal) {
         modal.classList.remove('open');
     }
+    backdrop.classList.remove('open');
+    setTimeout(() => {
+        backdrop.style.display = 'none';
+    }, 200);
 };
 
 for (const selectPlanButton of selectPlanButtons) {
     selectPlanButton.addEventListener("click", () => {
-        backdrop.classList.add('open');
+        backdrop.style.display = 'block';
+        setTimeout(() => {
+            backdrop.classList.add('open');
+        }, 10);
         modal.classList.add('open');
     });
 }
@@ -28,6 +34,9 @@ backdrop.addEventListener("click", () => {
 });
 toggleButton.addEventListener("click", () => {
     mobileNav.classList.add('open');
-    backdrop.classList.add('open');
+    backdrop.style.display = 'block';
+    setTimeout(() => {
+        backdrop.classList.add('open');
+    }, 10);
 });
 
