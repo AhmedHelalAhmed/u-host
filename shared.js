@@ -6,6 +6,7 @@ const closeModelButton = document.querySelector('.modal__action--negative');
 
 const toggleButton = document.querySelector('.toggle-button');
 const mobileNav = document.querySelector('.mobile-nav');
+const ctaButton = document.querySelector('.main-nav__item--call-to-action');
 const closeModel = () => {
     if (modal) {
         modal.classList.remove('open');
@@ -40,3 +41,15 @@ toggleButton.addEventListener("click", () => {
     }, 10);
 });
 
+// events triggered by the animation we can use it if needed
+ctaButton.addEventListener('animationstart', (event) => {
+    console.log('Animation started', event);
+});
+
+ctaButton.addEventListener('animationend', (event) => {
+    console.log('Animation ended', event);
+});
+
+ctaButton.addEventListener('animationiteration', (event) => {
+    console.log('Animation iteration', event);
+});
